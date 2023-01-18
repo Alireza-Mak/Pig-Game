@@ -57,7 +57,7 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
   if (activeGame) {
     var finalScoreInput = document.querySelector('.final-score').value;
     if (!finalScoreInput) {
-      finalScoreInput = 20;
+      finalScoreInput = 50;
     }
     scores[playerTurn] += currentScore;
     document.querySelector(`#score-${playerTurn}`).textContent =

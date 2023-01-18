@@ -1,0 +1,323 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /GOOGLE FONT/ -->
+
+    <!-- FAV ICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- /FAV ICON/ -->
+
+    <!-- IONIC -->
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- /IONIC/ -->
+
+    <!-- FONTAWESOME -->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!-- /FONTAWESOME/ -->
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <!-- /BOOTSTRAP/ -->
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- /STYLE/ -->
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/app.js" defer></script>
+    <!-- /JAVASCRIPT/ -->
+
+    <!-- TITLE -->
+    <title>Pig Game</title>
+    <!-- /TITLE/ -->
+  </head>
+
+  <body>
+    <!-- START HERE -->
+    <!-- /MAIN SECTION/ -->
+    <main
+      class="container title-container text-center bg-purple text-till"
+      id="wrapper"
+    >
+      <!-- TITLE SECTION -->
+      <div class="row title bg-red">
+        <h3 class="col text-light">Dice Game</h3>
+      </div>
+      <!-- /TITLE SECTION/ -->
+
+      <!-- PLAYER SECTION -->
+      <div class="row">
+        <div class="col player-0-panel active">
+          <div class="player-0-panel">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box bg-red text-light">
+              <div class="player-current-label pt-2 text-dark">Current</div>
+              <div class="player-current-score" id="current-0">11</div>
+            </div>
+          </div>
+        </div>
+        <div class="col player-1-panel">
+          <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box bg-red text-light">
+              <div class="player-current-label pt-2 text-dark">Current</div>
+              <div class="player-current-score" id="current-1">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /PLAYER SECTION/ -->
+
+      <!-- BUTTONS -->
+      <button class="button btn-new">
+        <i class="ion-ios-plus-outline"></i>New game
+      </button>
+      <button class="button btn-rules">
+        <i class="ion-ios-paper-outline"></i>Rules
+      </button>
+      <button class="button btn-roll">
+        <i class="ion-ios-loop"></i>Roll dice
+      </button>
+      <button class="button btn-hold">
+        <i class="ion-ios-download-outline"></i>Hold
+      </button>
+      <!-- BUTTONS -->
+
+      <!-- FINAL SCORE -->
+      <input type="number" placeholder="Final score" class="text-center final-score" />
+      <!-- FINAL SCORE -->
+
+      <!-- /DICE/ -->
+      <img src="./img/dice-4.png" alt="Dice" class="dice" id="dice-1" />
+      <img src="./img/dice-5.png" alt="Dice" class="dice" id="dice-2" />
+      <!-- /DICE/ -->
+    </main>
+    <!-- /MAIN SECTION/ -->
+    <!-- FOOTER -->
+    <footer id="main-footer" class="footer py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small
+              >&copy; <span id="year"> </span
+              ><a class="footer__link" href="https://alirezamak.com/">
+                Alireza Mak</a
+              >
+              | Front End Developer. All rights reserved.
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER/ -->
+
+    <!-- POPUP RULES -->
+    <div class="popup__rules">
+      <div class="popup__content popup__rules__content">
+        <button class="popup__rules__close  popup__close">&times;</button>
+        <div class="text-center text-light bg-red py-2 popup__rules__heading">
+          <h3>Welcome to Dice Game</h3>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="popup__rules__image__container">
+              <img
+                src="./img/popup-img.png"
+                alt="popup-img"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="text-light py-2">
+              <h4>Here are some rules:</h4>
+            </div>
+            <ul class="popup__rules__texts pl-3 pr-5">
+              <li>Two players participate in rounds of the game.</li>
+              <li>
+                Players can set goals in order to win the game. The game will automatically establish a default score of 50 points if users do not input a score. Players may, however, modify their goals whenever they choose.
+              </li>
+              <li>
+                A player may roll the dice as many times as he likes during each turn.
+              His round score is increased by each outcome.
+              </li>
+              <li>
+                The player loses his full round score if he rolls a 1 on both dice. The following player then has a turn.
+              </li>
+              <li>
+                The player loses his full final score if he rolls a 6 on both dice. The following player then has a turn.
+              </li>
+              <li>
+                The option to "hold" allows the player to have his round score added to his overall score. The following player then has a turn.
+              </li>
+            </ul>
+          </div>
+          <div class="col text-center pb-4">
+            <button
+              class="bg-red text-light popup__rules__letsPlayBtn"
+              id="letsPlay"
+            >
+              LET'S PLAY
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /POPUP RULES/ -->
+
+    <!-- POPUP WINNER -->
+    <div class="popup__winnerPlayer">
+      <div class="popup__winnerPlayer__content popup__content">
+        <button id="popup__winnerPlayer__close" class="popup__close">
+          &times;
+        </button>
+        <div class="text-center text-light bg-red py-2 popup__rules__heading">
+          <h3 class="popup__winnerPlayer__name">Winner Name!</h3>
+        </div>
+        <video width="100%" id="video" muted loop>
+          <source src="./img/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="popup__winnerPlayer__tryAgain">
+          <button class="popup__winnerPlayer__tryAgainBtn">Try Again</button>
+        </div>
+      </div>
+    </div>
+    <!-- /POPUP WINNER/ -->
+
+    <!-- /POPUP NEW GAME/ -->
+    <div class="popup__newGame">
+      <div class="popup__content popup__newGame__content">
+        <button id="popup__inputs__close" class="popup__close">&times;</button>
+        <div class="text-center text-light bg-red py-2 popup__rules__heading">
+          <h3>Please Enter your Names:</h3>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="popup__newGame__Container">
+              <div class="popup__newGame__inputGroup">
+                <input
+                  onkeydown="clearError()"
+                  type="text"
+                  id="player0"
+                  placeholder="Player One Name"
+                  maxlength="10"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player0">Player One Name</label>
+                <div class="error">
+                  <p class="error error0">Please Enter Player one name</p>
+                </div>
+              </div>
+              <div class="popup__newGame__inputGroup">
+                <input
+                  autocomplete="off"
+                  maxlength="10"
+                  onkeydown="clearError()"
+                  type="text"
+                  id="player1"
+                  required
+                  placeholder="Player Two Name"
+                />
+                <label for="player1">Player Two Name</label>
+                <div class="error">
+                  <p class="error error1">Please Enter Player two name</p>
+                </div>
+                <p id="samename_error" class="error" style="visibility: hidden">
+                  you could not choose the same name.
+                </p>
+              </div>
+              <div class="popup__newGame__inputGroup">
+                <button
+                  value="Start"
+                  class="bg-red text-light popup__rules__letsPlayBtn"
+                  id="start"
+                >
+                  Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /POPUP NEW GAME/ -->
+
+    <!-- SCRIPT -->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
